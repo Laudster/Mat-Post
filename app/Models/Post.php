@@ -8,6 +8,7 @@ class Post extends Model
 {
     protected $fillable = [
         "message",
-        "image"
+        "image",
+        "creator"
     ];
 }

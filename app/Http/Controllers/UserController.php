@@ -47,4 +47,11 @@ class UserController extends Controller
 
         return redirect("/");
     }
+
+    public function slettBruker()
+    {
+        auth()->user()->delete();
+
+        return redirect("/");
+    }
 }

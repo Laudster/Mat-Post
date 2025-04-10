@@ -21,9 +21,11 @@ class PostController extends Controller
             $image = $request->file("image");
             $extension = $image->getClientOriginalExtension();
             $filename = Str::random(40) . "." . $extension;
-            $imageURL = $image->storeAs("public/postImages",  $filename);
+            $imageURL = $image->storeAs("/postImages",  $filename, "public");
             $form_data["image"] = Storage::url($imageURL);
         }
+
+        $form_data["creator"] = auth()->user()->id;
 
         $post = Post::create($form_data);
 

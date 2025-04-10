@@ -1,0 +1,15 @@
+.post-image
+{
+    max-width: 300px;
+}
+
+nav 
+{
+    display: flex;
+    gap: 2rem;
+}
+
+li
+{
+    list-style-type: none;
+}
